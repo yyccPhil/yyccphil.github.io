@@ -16,7 +16,9 @@ timezone: America/Chicago
 
 title: Yuan Yuan # the main title
 
-tagline: To be true to yourself, first be honest with yourself.
+tagline: |
+    To be true to yourself,
+    first be honest with yourself.
 
 description: >- # used by seo meta and the atom feed
   A personal blog by Yuan Yuan.

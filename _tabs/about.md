@@ -13,6 +13,10 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 - `2016/09 - 2020/07`: Bachelor of Electronic and Information Engineering, Fan Gongxiu Honors College,<br>Beijing University of Technology, Beijing.
 - `2010/09 - 2016/06`: Middle School Diploma, The High School Affiliated to Renmin University of China, Beijing.
 
+💻 **Work:**
+- `2024/01 - Present`: Data Engineer, Tesla, Austin, Texas.
+- `2023/05 - 2023/09`: Data Engineer Intern, Torqata Data and Analytics LLC, Huntersville, NC (Remote).
+
 🔍 **Keywords:**
 
 * Soccer Enthusiast

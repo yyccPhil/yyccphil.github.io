@@ -31,4 +31,5 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 📧 **Contact information:**
 
 * Email: [yyccphil@gmail.com](mailto:yyccphil@gmail.com)
-* Resume: <iframe src="../assets/files/Yuan_Resume_2025.pdf" width="100%" height='800'></iframe>
+* Resume:
+<iframe src="/assets/files/Yuan_Resume_2025.pdf" width="100%" height='800'></iframe>

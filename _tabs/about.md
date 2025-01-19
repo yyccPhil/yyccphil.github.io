@@ -16,6 +16,7 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 💻 **Work:**
 - `2024/01 - Present`: Data Engineer, Tesla, Austin, Texas.
 - `2023/05 - 2023/09`: Data Engineer Intern, Torqata Data and Analytics LLC, Huntersville, NC (Remote).
+- `2022/04 - 2022/07`: Data Analyst Intern, Maimai (Chinese version of LinkedIn), Beijing, China.
 
 🔍 **Keywords:**
 

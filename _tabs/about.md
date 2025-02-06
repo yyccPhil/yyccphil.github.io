@@ -18,6 +18,9 @@ Welcome to my Blog! It's generated from a static web page built using Jekyll on 
 - `2023/05 - 2023/09`: Data Engineer Intern, Torqata Data and Analytics LLC, Huntersville, NC (Remote).
 - `2022/04 - 2022/07`: Data Analyst Intern, Maimai (Chinese version of LinkedIn), Beijing, China.
 
+📖 **Publication:**
+- `2021/05/03`: Key Frame Extraction Based on Global Motion Statistics for Team-Sport Videos, Yuan, Y., Lu, Z., Yang, Z., Jian, M., Wu, L. F., Li, Z. Y., Liu, X., Multimedia Systems, 2021, DOI: [10.1007/s00530-021-00777-7](https://link.springer.com/article/10.1007/s00530-021-00777-7)<br>(Project showcased at ChinaMM 2020 through poster and oral presentations.)
+
 🔍 **Keywords:**
 
 * Soccer Enthusiast

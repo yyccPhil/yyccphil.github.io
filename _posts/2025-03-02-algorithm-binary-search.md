@@ -207,7 +207,7 @@ Output: `[-1,-1]`
 #### Problem-solving approach
 In this problem, we need to find boundaries when the `target` value is not unique. Same as in the classic binary search, we no longer have the constraint that "all integers in `nums` are **unique**." The most straightforward solution is that when we find a `target`, we do not just return its index. Instead, we need to continue searching on both sides to locate the boundaries. A naive approach might be to adjust the code when `if nums[mid] == target`, we easily set `mid += 1` or `mid -= 1`. While this works, it’s not ideal, because it risks breaking the logarithmic time complexity of binary search.
 
-So the key challenge is how to adjust our actions when `if nums[mid] == target` while still maintaining `O(log n)` time complexity. To achieve this, we need to keep moving the left and right pointers to shrink the search interval, just as in standard binary search. For consistency and simplicity, we’ll still use left-open, right-closed interval `[left, right)`, as mentioned [above](https://yyccphil.github.io/posts/algorithm-binary-search/#problem-solving-approach).
+So the key challenge is how to adjust our actions when `if nums[mid] == target` while still maintaining `O(log n)` time complexity. To achieve this, we need to keep moving the left and right pointers to shrink the search interval, just as in standard binary search. For consistency and simplicity, we’ll still use left-open, right-closed interval `[left, right)`, as mentioned [above](https://yyccphil.github.io/posts/algorithm-binary-search/#solution).
 - For the left boundary, when we find the `target`, we set `right = mid` to keep searching leftward.
 - For the right boundary, we set `left = mid + 1` to continue searching rightward. This process repeats until the loop exits when `left == right`.
 
@@ -219,7 +219,7 @@ Finally, we just need to check whether `nums[left]` (left boundary) or `nums[lef
 
 > Be sure to check for **out-of-bounds** errors as well.
 {: .prompt-warning }
-- When searching for the left boundary, based on the experience from [problem 35](https://yyccphil.github.io/posts/algorithm-binary-search/#problem-solving-approach): if the `target` is not found, `left` may become `len(nums)`. 
+- When searching for the left boundary, based on the experience from [problem 35](https://yyccphil.github.io/posts/algorithm-binary-search/#problem-solving-approach-1): if the `target` is not found, `left` may become `len(nums)`. 
 - When searching for the right boundary, if `target` is unique and happens to be the first element in `nums`, `left - 1` could smaller than 0.
 
 For consistency and simplicity, we can always verify whether the index is valid before accessing it.

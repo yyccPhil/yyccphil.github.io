@@ -306,6 +306,6 @@ class Solution:
         return left - 1 if nums[left - 1]==target else -1
 ```
 
-## Reverse Footnote
+## Reference
 
 [^footnote]: [Labuladong Algo Notes: Binary Search Algorithm Code Template](https://labuladong.online/algo/en/essential-technique/binary-search-framework/#what-to-return-if-target-does-not-exist)

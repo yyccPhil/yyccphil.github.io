@@ -62,48 +62,10 @@ Array elements can't really be deleted, they can only be overwritten. (This does
 
 ## Binary Search
 
-**LeetCode link: [704](https://leetcode.com/problems/binary-search)**
+Since binary search is both classic and crucial, and it involves numerous details, I have dedicated a separate post to explain it in depth and covers some related problems:
+- **[704](https://leetcode.com/problems/binary-search)**: classic binary search
+- **[35](https://leetcode.com/problems/search-insert-position)**: demonstrates the return value of binary search
+- **[34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)**: find left and right boundaries
+- **[69](https://leetcode.com/problems/sqrtx/)** and **[367](https://leetcode.com/problems/valid-perfect-square/)**
 
-### Description
-Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return `-1`.
-
-You must write an algorithm with `O(log n)` runtime complexity.
-
-**Example 1:**
-
-Input: `nums = [-1,0,3,5,9,12], target = 9`<br>
-Output: `4`<br>
-Explanation: `9 exists in nums and its index is 4`
-
-**Example 2:**
-
-Input: `nums = [-1,0,3,5,9,12], target = 2`<br>
-Output: `-1`<br>
-Explanation: `2 does not exist in nums so return -1`
-
-**Constraints:**
-
-- `1 <= nums.length <= 104`
-- `-104 < nums[i], target < 104`
-- All the integers in `nums` are **unique**.
-- `nums` is sorted in ascending order.
-
-### Problem-solving approach
-Since binary search is both classic and crucial, and it involves numerous details, I have dedicated a separate post to explain it in depth. For more details, please visit: [Data Structures & Algorithms Learning Plaza - Binary Search](https://yyccphil.github.io/posts/algorithm-binary-search/).
-
-### Solution
-```python
-def search(self, nums: List[int], target: int) -> int:
-	left = 0
-	right = len(nums) - 1
-
-	while left <= right:
-		mid = (right - left)//2 + left
-		if nums[mid] == target:
-			return mid
-		elif nums[mid] < target:
-			left = mid + 1
-		else:
-			right = mid - 1
-	return -1
-```
+For more details, please visit: [Data Structures & Algorithms Learning Plaza - Binary Search](https://yyccphil.github.io/posts/algorithm-binary-search/).

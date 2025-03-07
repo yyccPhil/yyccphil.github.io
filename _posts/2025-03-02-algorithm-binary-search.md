@@ -144,7 +144,7 @@ Output: `4`
 
 #### Problem-solving approach
 This problem primarily demonstrates a **characteristic** of the binary search:
-- In left-closed, right-open search interval `[left, right)`, if the `target` is not found, the loop exits, and the pointers stop at the smallest index corresponding to a value greater than the `target` (if the `target` is greater than the `max(nums)`, the value is the `len(nums)`).
+- In left-closed, right-open search interval `[left, right)`, when the loop exits, if the `target` is not found, the pointers stop at the smallest index corresponding to a value greater than the `target` (if the `target` is greater than the `max(nums)`, the value is the `len(nums)`).
 
 There’s no need to memorize this result, we can simply test it with any example. However, regarding the selection of the search interval, I still recommend to use `[left, right)` interval, so that we don’t need to worry about whether to return `left` or `right`. For detailed differences in return values, please refer to [Labuladong Algo Notes](https://labuladong.online/algo/en/essential-technique/binary-search-framework/#what-to-return-if-target-does-not-exist)[^footnote].
 
@@ -304,6 +304,103 @@ class Solution:
         if left - 1 < 0:
             return -1
         return left - 1 if nums[left - 1]==target else -1
+```
+
+### 69. Sqrt(x)
+
+**LeetCode link: [69](https://leetcode.com/problems/sqrtx/)**
+
+#### Description
+Given a non-negative integer `x`, return _the square root of `x` rounded down to the nearest integer_. The returned integer should be **non-negative** as well.
+
+You **must not use** any built-in exponent function or operator.
+
+- For example, do not use `pow(x, 0.5)` in c++ or `x ** 0.5` in python.
+
+**Example 1:**
+
+Input: `x = 4`<br>
+Output: `2`<br>
+Explanation: `The square root of 4 is 2, so we return 2.`
+
+**Example 2:**
+
+Input: `x = 8`<br>
+Output: `2`<br>
+Explanation: `The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.`
+
+**Constraints:**
+
+- `0 <= x <= 2^31 - 1`
+
+#### Problem-solving approach
+This problem is very similar to the classic binary search. We can treat it as searching for the square root of a number in a virtual sorted array ranging from 0 to the number itself. This setup satisfies the two key prerequisites of binary search: the array is **sorted** and contains **no duplicates**. So the only difference is that instead of checking `if nums[mid] == target`, we check `if mid**mid == x`.
+
+However, be careful about what to return if the square root is not found. Based on the experience from [problem 35](https://yyccphil.github.io/posts/algorithm-binary-search/#problem-solving-approach-1): when the loop exits, the pointers stop at the smallest index corresponding to a value greater than the `target`. Since the problem requires us to return _the square root of `x` rounded down to the nearest integer_, we should return the number before the pointer, that is `left - 1`.
+
+#### Solution
+```python
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        left, right = 0, x+1
+
+        while left < right:
+            mid = (right-left)//2+left
+
+            if mid*mid == x:
+                return mid
+            elif mid*mid > x:
+                right = mid
+            elif mid*mid < x:
+                left = mid + 1
+        return left - 1
+```
+
+### 367. Valid Perfect Square
+
+**LeetCode link: [367](https://leetcode.com/problems/valid-perfect-square/)**
+
+#### Description
+Given a positive integer num, return `true` _if `num` is a perfect square or `false` otherwise_.
+
+A `perfect square` is an integer that is the square of an integer. In other words, it is the product of some integer with itself.
+
+You must not use any built-in library function, such as `sqrt`.
+
+**Example 1:**
+
+Input: `num = 16`<br>
+Output: `true`<br>
+Explanation: `We return true because 4 * 4 = 16 and 4 is an integer.`
+
+**Example 2:**
+
+Input: `num = 14`<br>
+Output: `false`<br>
+Explanation: `We return false because 3.742 * 3.742 = 14 and 3.742 is not an integer.`
+
+**Constraints:**
+
+- `0 <= x <= 2^31 - 1`
+
+#### Problem-solving approach
+This problem is even simpler and more straightforward than the previous one. We just need to check whether we can find the square root. If we do, we return `True`; otherwise, once we exit the loop, we simply return `False`.
+
+#### Solution
+```python
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        left, right = 0, num+1
+
+        while left < right:
+            mid = (right-left)//2 + left
+            if mid*mid == num:
+                return True
+            elif mid*mid > num:
+                right = mid
+            elif mid*mid < num:
+                left = mid + 1
+        return False
 ```
 
 ## Reference

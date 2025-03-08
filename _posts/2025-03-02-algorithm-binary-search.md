@@ -7,7 +7,7 @@ tags: [leetcode, python, algorithm, array]     # TAG names should always be lowe
 media_subpath : /assets/img/in_post/dsa/
 ---
 
-Binary search is arguably one of the most iconic problems in algorithms. Its core idea is pretty straightforward, yet the implementation details are really easy to make mistakes. I view binary search as a variation of the `two-pointer` solution. The objective is to guide two pointers, left and right, toward each other to locate the `target`. And the movement here hinges on comparing the middle element between the pointers to the target, achieving a time complexity of `O(log n)`.
+Binary search is arguably one of the most iconic problems in algorithms. Its core idea is pretty straightforward, yet the implementation details are really easy to make mistakes. I view binary search as a variation of the `two-pointer` approach. The objective is to guide two pointers, left and right, toward each other to locate the `target`. And the movement here hinges on comparing the middle element between the pointers to the target, achieving a time complexity of `O(log n)`.
 
 **LeetCode link: [704](https://leetcode.com/problems/binary-search)**
 
